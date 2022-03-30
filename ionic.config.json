@@ -1,0 +1,7 @@
+{
+  "name": "Labtest2_CalvinPierce",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
