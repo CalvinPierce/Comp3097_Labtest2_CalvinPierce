@@ -1,20 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Lab Test 2 - Calvin Pierce - 101253832
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- <div id="container">
+    <p>Lat: {{lat}} Long: {{long}} Time: {{time}}</p>
+  </div> -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-list-header>
+      Locations
+    </ion-list-header>
+    <ion-item lines="inset" *ngFor="let data of Data">
+      <ion-label>
+        <h5>Timestamp: {{data.locationtime}}</h5>
+        <h5>Latitude: {{data.latitude}}</h5>
+        <h5>Longitude: {{data.longitude}}</h5>
+      </ion-label>
+      <div class="item-note" item-end>    
+        <ion-icon name="trash" style="zoom:2.0" (click)="deleteLocation(data.locationtime)"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
